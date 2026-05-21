@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EUDAIMONIA Leaderboard</title>
+    <meta
+      name="description"
+      content="Overall EUDAIMONIA model leaderboard by design-requirement violation rate."
+    />
+    <meta property="og:title" content="EUDAIMONIA Leaderboard" />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#d97757" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+4:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="EUDAIMONIA home">
+        <span class="brand-mark" aria-hidden="true">E</span>
+        <span>EUDAIMONIA</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html#overview">Overview</a>
+        <a href="index.html#curation">Curation</a>
+        <a href="index.html#results">Results</a>
+        <a class="nav-cta" href="leaderboard.html">Leaderboard</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero leaderboard-hero" aria-labelledby="leaderboard-title">
+        <p class="eyebrow">Leaderboard</p>
+        <h1 id="leaderboard-title">Overall Violation Rate</h1>
+        <p class="hero-subtitle">
+          Lower is better. Values report the fraction of assigned
+          design-requirement checks violated by each model.
+        </p>
+        <div class="resource-actions" aria-label="Resources">
+          <button class="resource-button is-disabled" type="button" data-placeholder="paper">Paper</button>
+          <a
+            class="resource-button"
+            href="https://github.com/eudaimonia-bench/eudaimonia-bench.github.io"
+            rel="noopener"
+          >
+            Code
+          </a>
+          <button class="resource-button is-disabled" type="button" data-placeholder="data">Data</button>
+          <a class="resource-button resource-button-primary" href="index.html">Main Page</a>
+        </div>
+      </section>
+
+      <section class="paper-section">
+        <figure class="figure-panel leaderboard-figure">
+          <img
+            src="assets/overall_model_leaderboard.png"
+            alt="Overall model leaderboard sorted by EUDAIMONIA violation rate."
+          />
+          <figcaption>
+            The 40 percentage point spread from GPT-5.5 to Grok 3 shows that
+            model choice is a major factor in observed social-design violation
+            rate.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="paper-section" aria-labelledby="table-title">
+        <div class="section-heading">
+          <p class="eyebrow">Full Table</p>
+          <h2 id="table-title">Model Rankings</h2>
+        </div>
+
+        <div class="leaderboard-table" role="table" aria-label="EUDAIMONIA leaderboard">
+          <div class="table-row table-head" role="row">
+            <span role="columnheader">Rank</span>
+            <span role="columnheader">Model</span>
+            <span role="columnheader">Family</span>
+            <span role="columnheader">Violation Rate</span>
+          </div>
+          <div class="table-row" role="row"><span>1</span><span>GPT-5.5</span><span>OpenAI</span><strong>27.2%</strong></div>
+          <div class="table-row" role="row"><span>2</span><span>Claude Opus 4.7</span><span>Anthropic</span><strong>30.7%</strong></div>
+          <div class="table-row" role="row"><span>3</span><span>Claude Opus 4.6</span><span>Anthropic</span><strong>30.8%</strong></div>
+          <div class="table-row" role="row"><span>4</span><span>GPT-5.4</span><span>OpenAI</span><strong>34.5%</strong></div>
+          <div class="table-row" role="row"><span>5</span><span>Grok 4.3</span><span>xAI</span><strong>37.6%</strong></div>
+          <div class="table-row" role="row"><span>6</span><span>GPT-4o</span><span>OpenAI</span><strong>39.9%</strong></div>
+          <div class="table-row" role="row"><span>7</span><span>GPT-4o mini</span><span>OpenAI</span><strong>43.8%</strong></div>
+          <div class="table-row" role="row"><span>8</span><span>Gemini 3.0 Flash</span><span>Google</span><strong>54.7%</strong></div>
+          <div class="table-row" role="row"><span>9</span><span>Qwen3 32B</span><span>Alibaba</span><strong>54.9%</strong></div>
+          <div class="table-row" role="row"><span>10</span><span>Qwen3.6 Max</span><span>Alibaba</span><strong>55.6%</strong></div>
+          <div class="table-row" role="row"><span>11</span><span>Qwen3 14B</span><span>Alibaba</span><strong>57.0%</strong></div>
+          <div class="table-row" role="row"><span>12</span><span>Qwen3 8B</span><span>Alibaba</span><strong>57.1%</strong></div>
+          <div class="table-row" role="row"><span>13</span><span>Claude Sonnet 4</span><span>Anthropic</span><strong>57.2%</strong></div>
+          <div class="table-row" role="row"><span>14</span><span>Gemini 3.1 Pro</span><span>Google</span><strong>57.7%</strong></div>
+          <div class="table-row" role="row"><span>15</span><span>DeepSeek v4 Pro</span><span>DeepSeek</span><strong>57.7%</strong></div>
+          <div class="table-row" role="row"><span>16</span><span>DeepSeek v4 Flash</span><span>DeepSeek</span><strong>61.2%</strong></div>
+          <div class="table-row" role="row"><span>17</span><span>Qwen3 1.7B</span><span>Alibaba</span><strong>61.2%</strong></div>
+          <div class="table-row" role="row"><span>18</span><span>DeepSeek Chat</span><span>DeepSeek</span><strong>61.5%</strong></div>
+          <div class="table-row" role="row"><span>19</span><span>Grok 4</span><span>xAI</span><strong>62.9%</strong></div>
+          <div class="table-row" role="row"><span>20</span><span>Gemini 2.0 Flash</span><span>Google</span><strong>63.9%</strong></div>
+          <div class="table-row" role="row"><span>21</span><span>Qwen3 4B</span><span>Alibaba</span><strong>65.1%</strong></div>
+          <div class="table-row" role="row"><span>22</span><span>Grok 3</span><span>xAI</span><strong>67.3%</strong></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>EUDAIMONIA</span>
+      <span>Public research artifact</span>
+    </footer>
+  </body>
+</html>
